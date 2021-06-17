@@ -3,8 +3,8 @@
 
 ## Thank you for checking it out:
 
-to run the app first clone it
-Then cd into the project folder and run: 
+to run the app first clone it,
+then cd into the project folder and run: 
 
 ### `npm start`
 
