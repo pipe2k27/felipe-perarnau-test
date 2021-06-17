@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './styles.css';
 
 const Stars = ({ number, className }) => {
@@ -8,6 +9,7 @@ const Stars = ({ number, className }) => {
       {starsArray.map((starNumber) => {
         return (
           <i
+            key={starNumber}
             className={`fas fa-star star ${
               starNumber <= number ? 'star-on' : 'star-off'
             }`}
@@ -16,6 +18,11 @@ const Stars = ({ number, className }) => {
       })}
     </div>
   );
+};
+
+Stars.propTypes = {
+  number: PropTypes.number,
+  className: PropTypes.string,
 };
 
 export default Stars;

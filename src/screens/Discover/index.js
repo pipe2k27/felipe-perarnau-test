@@ -18,6 +18,15 @@ const Discover = ({ setCurrentMovieData }) => {
 
   useEffect(() => {
     setLoadingMovies(true);
+    // this will check wether there is a current page in
+    // the actual session and set it
+    if (sessionStorage.sessionPage) {
+      const storedPage = JSON.parse(sessionStorage.sessionPage);
+      setCurrentPage(storedPage);
+    }
+
+    // this will check wether there is a search term
+    // and set movies to search or popular
     if (SearchResults !== null) {
       setDisplayMovies(SearchResults);
       setLoadingMovies(false);
@@ -72,12 +81,16 @@ const Discover = ({ setCurrentMovieData }) => {
           </p>
           <StarsFilter number={starsFilterNumber} setter={starFilterSetter} />
         </div>
+        {!SearchResults && (
+          <p className="discover-top-page">Page {currentPage}</p>
+        )}
         {!loadingMovies && displayMovies && (
           <div className="discover-grid center">
             {displayMovies.results.map((movie) => {
               if (movie.poster_path && movie.backdrop_path) {
                 return (
                   <MovieSmall
+                    key={movie.title}
                     title={movie.title}
                     poster={movie.poster_path}
                     setCurrentMovieData={setCurrentMovieData}
@@ -98,6 +111,8 @@ const Discover = ({ setCurrentMovieData }) => {
             <div
               className="discover-page-button"
               onClick={() => {
+                sessionStorage.setItem('sessionPage', currentPage - 1);
+
                 setCurrentPage((prev) => prev - 1);
                 window.scrollTo(0, 500);
                 setStarsFilterNumber(0);
@@ -110,6 +125,7 @@ const Discover = ({ setCurrentMovieData }) => {
           <div
             onClick={() => {
               setCurrentPage((prev) => prev + 1);
+              sessionStorage.setItem('sessionPage', currentPage + 1);
               window.scrollTo(0, 500);
               setStarsFilterNumber(0);
             }}

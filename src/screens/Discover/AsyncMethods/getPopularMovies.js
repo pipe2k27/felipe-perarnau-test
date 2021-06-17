@@ -4,11 +4,15 @@
 const myKey = '270db1326586b858b0b7001ef3f0efb6';
 // fetches popular movies
 const getPopularMovies = async (pageNumber) => {
-  const data = await fetch(
-    `https://api.themoviedb.org/3/discover/movie?api_key=${myKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNumber}&with_watch_monetization_types=flatrate`
-  );
-  const movies = await data.json();
-  return movies;
+  try {
+    const data = await fetch(
+      `https://api.themoviedb.org/3/discover/movie?api_key=${myKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNumber}&with_watch_monetization_types=flatrate`
+    );
+    const movies = await data.json();
+    return movies;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export default getPopularMovies;

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import './styles.css';
 import { useHistory } from 'react-router-dom';
 import Stars from '../Stars';
@@ -28,6 +29,14 @@ const MovieSmall = ({
       {/* <span className="small-movie-title">{title}</span> */}
     </div>
   );
+};
+
+MovieSmall.propTypes = {
+  title: PropTypes.string,
+  poster: PropTypes.string,
+  stars: PropTypes.number,
+  movieData: PropTypes.shape({}),
+  setCurrentMovieData: PropTypes.func,
 };
 
 export default MovieSmall;

@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './styles.css';
 
+// this component works as a filter for movies according to rating
 const StarsFilter = ({ number, className, setter }) => {
   const starsArray = [1, 2, 3, 4, 5];
   return (
@@ -9,6 +11,7 @@ const StarsFilter = ({ number, className, setter }) => {
       {starsArray.map((starNumber) => {
         return (
           <i
+            key={starNumber}
             className={`fas fa-star stars-filter ${
               starNumber <= number ? 'star-filter-on' : 'star-filter-off'
             }`}
@@ -26,6 +29,12 @@ const StarsFilter = ({ number, className, setter }) => {
       </p>
     </div>
   );
+};
+
+StarsFilter.propTypes = {
+  number: PropTypes.number,
+  className: PropTypes.string,
+  setter: PropTypes.func,
 };
 
 export default StarsFilter;

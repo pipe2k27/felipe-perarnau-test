@@ -1,15 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './styles.css';
 
 const SearchBar = ({ setSearchResults }) => {
+  // movieGetter searches for movies with the term provided
   const movieGetter = async (searchTerm) => {
     if (searchTerm.trim() !== '') {
-      const data = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=270db1326586b858b0b7001ef3f0efb6&language=en-US&query=${searchTerm}&page=1&include_adult=false`
-      );
-      const movies = await data.json();
-      console.log(movies);
-      setSearchResults(movies);
+      // On a larger project would hav used redux sagas or thunks for async calls
+      try {
+        const data = await fetch(
+          `https://api.themoviedb.org/3/search/movie?api_key=270db1326586b858b0b7001ef3f0efb6&language=en-US&query=${searchTerm}&page=1&include_adult=false`
+        );
+        const movies = await data.json();
+        setSearchResults(movies);
+      } catch (error) {
+        console.log(error);
+      }
     } else {
       setSearchResults(null);
     }
@@ -29,6 +35,10 @@ const SearchBar = ({ setSearchResults }) => {
       </div>
     </div>
   );
+};
+
+SearchBar.propTypes = {
+  setSearchResults: PropTypes.func,
 };
 
 export default SearchBar;
