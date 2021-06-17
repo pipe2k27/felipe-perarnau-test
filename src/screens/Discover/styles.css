@@ -1,0 +1,73 @@
+.discover{
+}
+
+.discover-introduction{
+    margin-bottom: 120px;
+    padding: 100px 100px 10px 100px; 
+    color: white;
+    position: relative;
+    top: 70px;
+}
+
+.discover-intro-box{
+    position: relative;
+    z-index: 2;
+}
+
+.discover-backdrop{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top:0;
+    z-index:1;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.discover-movies{
+    width: 900px;
+    margin: 50px 0;
+    min-height: 1200px;
+}
+
+.discover-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 900px;
+}
+
+.discover-page-button-div{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.discover-page-button{
+    background-color: #7b47f3;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 30px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 700;
+    border: solid 2px #7b47f3;
+    border-radius: 2px;
+    width: 120px;
+}
+
+.discover-page-button:hover{
+    background-color:#ffffff ;
+    color: #7b47f3;
+
+}
+
+.discover-loading{
+    text-align: center;
+    position: relative;
+    top: 40px;
+    font-size: 2rem;
+    color: grey;
+}

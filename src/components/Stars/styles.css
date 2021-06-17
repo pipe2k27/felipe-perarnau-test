@@ -1,0 +1,10 @@
+.star{
+    margin: 0 2px;
+}
+.star-on{
+    color: #ddc080;
+}
+
+.star-off{
+    color: rgb(236, 234, 234);
+}

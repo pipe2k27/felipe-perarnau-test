@@ -1,0 +1,38 @@
+.small-movie{
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.small-movie-poster{
+    transition: all 0.14s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 9px 6px -5px rgba(0, 0, 0, 0.43);
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.small-movie-poster:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 13px 26px -3px rgba(0, 0, 0, 0.33);
+    }
+    
+.small-movie-stars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transform: translateY(10%);
+    z-index: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s;
+    opacity: 0;
+}
+
+.small-movie:hover .small-movie-stars{ 
+    transform: translateY(-100%);
+    opacity: 1;
+    }
+    

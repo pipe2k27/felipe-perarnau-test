@@ -1,0 +1,33 @@
+.stars-filter{
+    margin-right: 8px;
+    transition: all 0.2s;
+    cursor: pointer;
+    transform: translateY(-20%) rotate(0deg);
+}
+
+.stars-filter:hover{
+    color: #b69a5d;
+    transform: scale(1.2) translateY(-30%) rotate(72deg);
+
+}
+.star-filter-on{
+    color: #ddc080;
+    transform: scale(1.2) translateY(-30%) rotate(72deg);
+}
+
+.star-filter-off{
+    color: rgb(236, 234, 234);
+}
+
+.star-reset{
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+    
+}
+
+.star-reset:hover{
+    transform: scale(0.9);
+}

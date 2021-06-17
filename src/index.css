@@ -1,13 +1,90 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy'), url(./fonts/Gilroy-ExtraBold.otf) format('otf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+h1{
+  font-weight: 900;
+  font-size: 5.5rem;
+}
+
+h2{
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.underline{
+  border-bottom: 4px solid #7b47f3;
+  width: fit-content;
+}
+
+
+/* background colors */
+
+.red-bg{
+  background-color: #f2695d;
+}
+
+.blue-bg{
+  background-color: #373182;
+}
+
+/* text colors */
+
+.red{
+  color: #f2695d;
+}
+
+.grey{
+  color: #585858;
+}
+
+.small{
+  font-size: 0.9rem;
+}
+
+/* display and positioning */
+
+.center{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* margins */
+
+.margin-l{
+  margin-left: 15px;
+}
+
+.margin-r{
+  margin-right: 15px;
+}
+
+.margin-v{
+  margin: 20px 0;
+}
+
+.margin0{
+  margin: 0;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.flex-space-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

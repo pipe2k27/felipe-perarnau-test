@@ -1,0 +1,36 @@
+.search-bar{
+    width: 800px;
+    border-radius: 40px;
+    height: 45px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255);
+    padding-left: 50px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-bar-container{
+    position: relative;
+}
+
+.search-bar-div{
+    margin: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+}
+
+.search-bar-icon{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    opacity: 0.6;
+}

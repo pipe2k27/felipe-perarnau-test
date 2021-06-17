@@ -1,0 +1,36 @@
+.footer {
+  padding: 45px 0;
+  height: auto;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  z-index: 5;
+  box-shadow: 0px -29px 19px -20px rgba(0, 0, 0, 0.15);
+}
+
+.footer-logo {
+  width: 390px;
+  margin-bottom: 30px;
+  margin-right: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-box{
+  position: relative;
+  z-index: 2;
+}
+
+
+.footer-backdrop{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index:1;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+}

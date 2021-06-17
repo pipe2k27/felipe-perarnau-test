@@ -1,0 +1,47 @@
+.movie-backdrop{
+    width: 500px;
+    max-width: 95%;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.movie-grid{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    align-items: flex-start;
+    width: 95%;
+    max-width: 1000px;
+    margin: 170px 0 40px; 
+}
+
+.movie-poster{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.movie-info{
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.movie-snapshots{
+    width: 95%;
+    max-width: 1000px;
+}
+
+.movie-back{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 120px;
+    left: 90px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.movie-back:hover{
+ transform: scale(1.1) ;
+ color: green;
+}
