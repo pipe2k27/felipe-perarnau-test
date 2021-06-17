@@ -1,0 +1,17 @@
+.only-mobile{
+    display: none;
+    position: relative;
+    top: 150px;
+    text-align: center;
+    width: 600px;
+    max-width: 90%;
+}
+@media (max-width: 1050px){ 
+    .only-desktop{
+        display: none;
+    }   
+    .only-mobile{
+        display: flex;
+
+    }
+}

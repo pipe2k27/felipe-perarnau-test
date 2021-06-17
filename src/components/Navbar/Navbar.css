@@ -19,6 +19,8 @@
   cursor: pointer;
   margin-left: 25px;
   position: relative;
+  max-width: 60%;
+  object-fit: contain;
 }
 .navbar {
   display: grid;

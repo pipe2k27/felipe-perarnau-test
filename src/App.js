@@ -12,13 +12,18 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Route exact path="/">
-        <Discover setCurrentMovieData={setCurrentMovieData} />
-      </Route>
-      <Route path="/movie">
-        <Movie data={currentMovieData} />
-      </Route>
-      <Footer />
+      <div className="only-desktop">
+        <Route exact path="/">
+          <Discover setCurrentMovieData={setCurrentMovieData} />
+        </Route>
+        <Route path="/movie">
+          <Movie data={currentMovieData} />
+        </Route>
+        <Footer />
+      </div>
+      <div className="only-mobile center">
+        Please open the app on a desktop computer on full screen to continue!
+      </div>
     </div>
   );
 }
