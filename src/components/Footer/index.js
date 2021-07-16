@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="footer-box">
         <p>Site created by Felipe Perarnau</p>
         <p>Buenos Aires, Argentina</p>
-        <p>Tel / Whatsapp: +54 9 11 6822 0080</p>
+        <p>Whatsapp: +54 9 11 6822 0080</p>
       </div>
       <Image name={'backdrop-footer.jpeg'} className="footer-backdrop" />
     </div>
